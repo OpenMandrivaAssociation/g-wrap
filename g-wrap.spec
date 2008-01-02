@@ -21,6 +21,7 @@ BuildRequires: automake1.9
 License: GPL
 Epoch: 1
 URL: http://www.gnucash.org
+BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 Requires: %{lib_name} >= %{epoch}:%{version}-%{release}
 Conflicts: guile-lib
 
