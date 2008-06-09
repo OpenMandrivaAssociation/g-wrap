@@ -87,12 +87,16 @@ make
 %clean
 [ -n "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf $RPM_BUILD_ROOT
 
+%if %mdkversion < 200900
 %post -p /sbin/ldconfig -n %{lib_name}
+%endif
 
 %post -n %{lib_name}-devel
 %_install_info %{name}.info
 
+%if %mdkversion < 200900
 %postun -p /sbin/ldconfig -n %{lib_name}
+%endif
 
 %postun -n %{lib_name}-devel
 %_remove_install_info %{name}.info
