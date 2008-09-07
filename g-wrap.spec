@@ -2,11 +2,12 @@
 %define modules_major 0
 %define lib_name %mklibname %{name} %{major}
 %define devel_name %mklibname %{name} -d
+%define epoch 1
 
 Summary: A tool for creating Scheme interfaces to C libraries
 Name: g-wrap
 Version: 1.9.11
-Release: %mkrel 1
+Release: %mkrel 2
 Source0: http://download.savannah.gnu.org/releases/g-wrap/%{name}-%{version}.tar.gz
 # gw fedora patches
 #Patch: g-wrap-1.9.6-glib2.patch
@@ -14,17 +15,16 @@ Patch1: g-wrap-consistent.patch
 Patch2: g-wrap-info.patch
 Patch3: g-wrap-1.9.11-ffi-pkgconfig.patch
 Requires: guile
-Requires: %{lib_name} = %{version}-%{release}
+Requires: %{lib_name} = %{epoch}:%{version}-%{release}
 Group: System/Libraries
 BuildRequires: guile-devel
 BuildRequires: glib2-devel
 BuildRequires: ffi5-devel
 BuildRequires: automake1.9
 License: LGPLv2+
-Epoch: 1
+Epoch: %{epoch}
 URL: http://www.gnucash.org
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
-Requires: %{lib_name} >= %{epoch}:%{version}-%{release}
 Conflicts: guile-lib
 
 %description
@@ -33,7 +33,7 @@ the moment it is most heavily focused on providing access to C
 libraries from guile, but it also supports RScheme.
 
 %package -n %{lib_name}
-Epoch: 1
+Epoch: %{epoch}
 Group:	%{group}
 Summary: %{summary}
 
@@ -43,7 +43,7 @@ import into a Scheme interpreter, and for generating code (in C) to
 interface these to the Guile and RScheme interpreters in particular.
 
 %package -n %{devel_name}
-Epoch: 1
+Epoch: %{epoch}
 Group:	Development/C
 Summary: Include files and libraries needed for g-wrap development
 Requires: %{name} = %{epoch}:%{version}-%{release}
