@@ -7,7 +7,7 @@
 Summary: A tool for creating Scheme interfaces to C libraries
 Name: g-wrap
 Version: 1.9.11
-Release: %mkrel 2
+Release: %mkrel 3
 Source0: http://download.savannah.gnu.org/releases/g-wrap/%{name}-%{version}.tar.gz
 # gw fedora patches
 #Patch: g-wrap-1.9.6-glib2.patch
