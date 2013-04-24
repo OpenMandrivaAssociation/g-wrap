@@ -82,8 +82,6 @@ make
 %makeinstall_std 
 #%multiarch_includes %buildroot%{_includedir}/%name/ffi-support.h
 
-%post -n %{devel_name}
-%_install_info %{name}.info
 
 %postun -n %{devel_name}
 %_remove_install_info %{name}.info
