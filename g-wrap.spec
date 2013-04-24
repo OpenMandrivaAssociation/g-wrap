@@ -83,8 +83,6 @@ make
 #%multiarch_includes %buildroot%{_includedir}/%name/ffi-support.h
 
 
-%postun -n %{devel_name}
-%_remove_install_info %{name}.info
 
 %files
 %defattr(-,root,root)
