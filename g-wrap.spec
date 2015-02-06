@@ -6,7 +6,7 @@
 Summary:	A tool for creating Scheme interfaces to C libraries
 Name:		g-wrap
 Version:	1.9.14
-Release:	3
+Release:	4
 Epoch:		1
 License:	LGPLv2+
 Group:		System/Libraries
