@@ -10,7 +10,7 @@ Release:	4
 Epoch:		1
 License:	LGPLv2+
 Group:		System/Libraries
-Url:		http://www.gnucash.org
+Url:		https://www.gnucash.org
 Source0:	http://download.savannah.gnu.org/releases/g-wrap/%{name}-%{version}.tar.gz
 BuildRequires:	gettext-devel
 BuildRequires:	pkgconfig(glib-2.0)
