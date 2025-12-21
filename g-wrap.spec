@@ -12,6 +12,11 @@ License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://www.gnucash.org
 Source0:	http://download.savannah.gnu.org/releases/g-wrap/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gettext-devel
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(guile-2.0)
